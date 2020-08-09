@@ -1,0 +1,24 @@
+{
+  "name": "botson",
+  "version": "1.1.0",
+  "description": "A discord bot that sends random GIFs of Emma Watson!",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/caasinehc/botson.git"
+  },
+  "author": "Isaac Chen",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/caasinehc/botson/issues"
+  },
+  "homepage": "https://github.com/caasinehc/botson#readme",
+  "dependencies": {
+    "discord.js": "^12.2.0",
+    "dotenv": "^8.2.0",
+    "http": "0.0.1-security"
+  }
+}
