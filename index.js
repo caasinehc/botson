@@ -67,7 +67,7 @@ bot.on("message", msg => {
 	
 	// Botson
 	else if(msg.content.toLowerCase().split(" ")[0] === "!botson") {
-		// Find out how many emma watson GIFs they want (default 1)
+		// Find out how many Emma Watson GIFs they want (default 1)
 		const countInput = msg.content.split(" ")[1];
 		let count = parseInt(countInput);
 		// Ensure it is a number (default to 1 if it isn't)
