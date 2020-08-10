@@ -61,12 +61,12 @@ bot.on("ready", () => {
 // Handle messages
 bot.on("message", msg => {
 	// Ping
-	if(msg.content === "!ping") {
+	if(msg.content.toLowerCase() === "!ping") {
 		msg.reply("pong");
 	}
 	
 	// Botson
-	else if(msg.content.split(" ")[0] === "!botson") {
+	else if(msg.content.toLowerCase().split(" ")[0] === "!botson") {
 		// Find out how many emma watson GIFs they want (default 1)
 		const countInput = msg.content.split(" ")[1];
 		let count = parseInt(countInput);
