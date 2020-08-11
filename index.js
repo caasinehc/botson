@@ -1,8 +1,8 @@
 /*
  * Botson
- * v1.1.0
+ * v1.2.0
  * By Isaac Chen
- * 8/9/2020
+ * 8/10/2020
  */
 
 // Requires
