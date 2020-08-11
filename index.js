@@ -65,6 +65,11 @@ bot.on("message", msg => {
 		msg.reply("pong");
 	}
 	
+	// Who is your love
+	else if(msg.content.toLowerCase() === "!whoisyourlove") {
+		msg.channel.send("@caasinehc#8574 is the only one for me <3");
+	}
+	
 	// Botson
 	else if(msg.content.toLowerCase().split(" ")[0] === "!botson") {
 		// Find out how many Emma Watson GIFs they want (default 1)
