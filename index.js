@@ -70,16 +70,17 @@ bot.on("message", msg => {
 	else if(msg.content.toLowerCase().split(" ")[0] === "!becho") {
 		// Verify that caasinehc was the one who asked
 		if(msg.author.id === caasinehcID) {	
-			// Echo whatever comes after "!becho"
-			const splitMsg = msg.content.split(" ");
-			splitMsg.shift();
-			const msgToEcho = splitMsg.join(" ");
+			// Echo whatever comes after "!becho "
+			const msgToEcho = msg.content.substring("!becho ".length - 1);
 			if(msgToEcho.length > 0) {
 				msg.channel.send(msgToEcho);
 			}
 			else {
 				msg.channel.send("Sorry, I can't send an empty message!");
 			}
+			
+			// Delete the command message
+			if(msg.deletable) msg.delete();
 		}
 	}
 	
