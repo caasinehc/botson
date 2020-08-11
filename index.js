@@ -16,6 +16,7 @@ const TOKEN = process.env.TOKEN;
 
 // Settings
 const MAX_GIFS = 10;
+const caasinehcID = "195213987871195137";
 
 // Functions
 // Send an http request to get a random Emma Watson GIF from Tenor
@@ -65,9 +66,21 @@ bot.on("message", msg => {
 		msg.reply("pong");
 	}
 	
-	// Who is your love
-	else if(msg.content.toLowerCase() === "!whoisyourlove") {
-		msg.channel.send("<@195213987871195137> is the only one for me :heart:");
+	// becho
+	else if(msg.content.toLowerCase().split(" ")[0] === "!becho") {
+		// Verify that caasinehc was the one who asked
+		if(msg.author.id === caasinehcID) {	
+			// Echo whatever comes after "!becho"
+			const splitMsg = msg.content.split(" ");
+			splitMsg.shift();
+			const msgToEcho = splitMsg.join(" ");
+			if(msgToEcho.length > 0) {
+				msg.channel.send(msgToEcho);
+			}
+			else {
+				msg.channel.send("Sorry, I can't send an empty message!");
+			}
+		}
 	}
 	
 	// Botson
