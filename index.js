@@ -67,7 +67,7 @@ bot.on("message", msg => {
 	
 	// Who is your love
 	else if(msg.content.toLowerCase() === "!whoisyourlove") {
-		msg.channel.send("@caasinehc#8574 is the only one for me <3");
+		msg.channel.send("<@195213987871195137> is the only one for me :heart:");
 	}
 	
 	// Botson
