@@ -88,6 +88,9 @@ bot.on("ready", () => {
 
 // Handle messages
 bot.on("message", msg => {
+	// Don't listen to commands from myself
+	if(msg.author.id === bot.user.id) return;
+	
 	// Ping
 	if(msg.content.toLowerCase() === "!ping") {
 		msg.reply("pong");
@@ -125,6 +128,10 @@ bot.on("message", msg => {
 		if(count === 69 || count === 420 || count === 69420) {
 			msg.channel.send(":rolling_eyes:");
 		}
+		// NNN lol funny meme jokes
+		else if((new Date()).getMonth() === 10) {
+			msg.channel.send("You know what month it is, right? Stay strong, soldier. :heart:");
+		}
 		// Ensure that we aren't sending too many GIFs at once
 		else if(count > MAX_GIFS) {
 			msg.channel.send(`I don't really wanna send more than ${MAX_GIFS} GIFs at a time, sorry!`);
@@ -136,6 +143,7 @@ bot.on("message", msg => {
 		// If the number of GIFs requested is reasonable, send em!
 		else {
 			// Send the requested number of Emma Watson GIFs!
+			// Only allow NSFW GIFs if the channel is marked NSFW
 			getGIFURLs(count, !msg.channel.nsfw).then(result => {
 				// Discord will only turn the first five links into embedded
 				// images, so we have to split the GIFs into blocks of 5, and
